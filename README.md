@@ -1,5 +1,5 @@
-# Challenge_One
-# Compass
+# Challenge_One Compass
+
 # Blog page
 
 This is a simple blog page design developed using HTML, CSS, JavaScript and TypeScript.
