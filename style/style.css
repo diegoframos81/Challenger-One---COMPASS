@@ -1,0 +1,140 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+header {
+
+    background: #32325D ;
+
+    position: fixed;
+
+    top: 0;
+
+    left: 0;
+
+    bottom: 95%;
+    width: 100%;
+
+    z-index: 999px;
+
+    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.5);
+
+}
+
+body {
+    background-color: #FFF;
+    height: 100vh;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+main.cards {
+    display: flex;
+    padding: 32px;
+    max-width: 95%;
+    
+}
+
+
+
+main.cards .cardsGrid{
+
+    padding-top: 100px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-items: center;
+    width: 90%;
+
+    row-gap: 30px;
+    
+    
+}
+
+main.cards section.card {
+    
+    
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    
+    width: 409px;
+    height: 455px;
+    flex-shrink: 0;
+    
+    border-radius: 8px;
+    max-height: 600px;
+    margin-left: 64px;
+
+    border-radius: 8px;
+    background: #FFF;
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25);
+}
+
+
+
+
+main.cards section.card .icon {
+    width: 409px;
+    height: 280px;
+    
+}
+
+main.cards section.card img {
+    width: 100%;
+}
+
+main.cards section.card h3 {
+    width: 152px;
+    
+
+    margin-top: 20px;
+    margin-left: 29px;
+    margin-right: 258px ;
+    margin-bottom: 15px;
+    color:  #3A4F9A;
+    font-size: 20px;
+    font-family: Inter;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 2px;
+}
+
+main.cards section.card .text{
+    display: flex;
+    width: 350px;
+    height: 95px;
+    flex-direction: column;
+    flex-shrink: 0;
+    max-width: 400px;
+}
+
+main.cards section.card span{
+    color:  #575757;
+    font-size: 13px;
+    font-family: Inter;
+    font-weight: 300;
+    line-height: 20px;
+    letter-spacing: 1.3px;
+}
+main.cards section.card button{
+    background: none;
+    margin-left: 300px;
+    padding: 0.5rem 1rem;
+    text-transform: uppercase;
+    border-radius: 32px;
+    border: 0;
+    cursor: pointer;
+    font-size: 70%;
+    font-weight: 500;
+}
