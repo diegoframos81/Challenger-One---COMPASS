@@ -1,79 +1,115 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
-}
-
-header {
-
-    background: #32325D ;
-
-    position: fixed;
-
-    top: 0;
-
-    left: 0;
-
-    bottom: 95%;
-    width: 100%;
-
-    z-index: 999px;
-
-    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.5);
-
+* {
+    font-family: Inter;
 }
 
 body {
+    margin: 0px;
+    padding: 0px;
+    font-size: 1.2rem;
+    font-family: Inter;
+    
     background-color: #FFF;
-    height: 100vh;
+}
+
+.header {
+    background-color: #32325D;
+
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
+    z-index: 999px;
+    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.5);
 
     display: flex;
-    justify-content: center;
-    align-items: center;
-    
-}
-
-main.cards {
-    display: flex;
-    padding: 32px;
-    max-width: 95%;
-    
-}
-
-
-
-main.cards .cardsGrid{
-
-    padding-top: 100px;
-    display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
-    justify-items: center;
-    width: 90%;
+    justify-content: first baseline;
+    padding: 20px;
+    padding-left: 168px;
+    align-items: center;
+    gap: 10px;
+}
 
-    row-gap: 30px;
+.tittle img {
+    padding: 5px;
+
+}
+
+.header span {
+    color: #FFF;
+    font-size: 24px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.tittle {
+
+    width: 221px;
+    height: 50px;
+
+
+    display: inline-flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin-left: 165px;
+    margin-top: 100px;
+    gap: 10px;
+
+}
+
+.tittle h1 {
+
+    color: #3A4F9A;
+    font-size: 36px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: 3.6px;
     
+    margin-bottom: 5px;
+    padding-bottom: 0px;
+    text-align: left;
+
+
+}
+
+.grid {
+    margin: 10px 200px 100px 300px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1400px;
+    padding: 10px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    grid-gap: 90px;
+
+}
+
+.grid img {
+    max-width: 100%;
+    height: 100%;
+    max-height: 300px;
+    width: 500px;
     
 }
 
-main.cards section.card {
-    
-    
-
+.grid div {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    
-    width: 409px;
-    height: 455px;
-    flex-shrink: 0;
-    
+
+    width: 480px;
+    height: 550px;
+
     border-radius: 8px;
-    max-height: 600px;
+    max-height: 800px;
     margin-left: 64px;
 
     border-radius: 8px;
@@ -81,28 +117,38 @@ main.cards section.card {
     box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25);
 }
 
+.grid button {
+    background: none;
+    margin-left: 350px;
+    padding: 0.5rem 1rem;
+    text-transform: uppercase;
+    border-radius: 32px;
+    border: 0;
+    cursor: pointer;
 
 
+    color: #3A4F9A;
+    font-size: 13px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 1.3px;
 
-main.cards section.card .icon {
-    width: 409px;
-    height: 280px;
-    
 }
 
-main.cards section.card img {
-    width: 100%;
+.grid button a{
+    color: #3A4F9A;
+    text-decoration: none;
 }
 
-main.cards section.card h3 {
-    width: 152px;
-    
 
-    margin-top: 20px;
-    margin-left: 29px;
-    margin-right: 258px ;
+.grid h2 {
+    
+    margin-top: 30px;
+    margin-right: 260px;
     margin-bottom: 15px;
-    color:  #3A4F9A;
+    color: #3A4F9A;
     font-size: 20px;
     font-family: Inter;
     font-weight: 500;
@@ -110,31 +156,50 @@ main.cards section.card h3 {
     letter-spacing: 2px;
 }
 
-main.cards section.card .text{
-    display: flex;
-    width: 350px;
-    height: 95px;
-    flex-direction: column;
-    flex-shrink: 0;
-    max-width: 400px;
+.grid .post1 {
+    width: 300px;
+    margin-left: -2px;
 }
 
-main.cards section.card span{
-    color:  #575757;
+.grid .post2 {
+    width: 380px;
+    margin-left: 245px;
+}
+
+.grid .post3 {
+    width: 380px;
+    margin-left: 50px;
+}
+
+.grid .post4 {
+    width: 380px;
+    margin-left: -10px;
+}
+
+.grid .post5 {
+    width: 380px;
+    margin-left: 50px;
+}
+
+.grid .post6 {
+    width: 380px;
+    margin-left: -70px;
+}
+.grid p {
+    display: flex;
+    width: 380px;
+    height: 110px;
+    flex-direction: column;
+    text-align: justify;
+    
+
+    color: #575757;
     font-size: 13px;
     font-family: Inter;
+    font-style: normal;
     font-weight: 300;
     line-height: 20px;
     letter-spacing: 1.3px;
+    word-wrap: break-word;
 }
-main.cards section.card button{
-    background: none;
-    margin-left: 300px;
-    padding: 0.5rem 1rem;
-    text-transform: uppercase;
-    border-radius: 32px;
-    border: 0;
-    cursor: pointer;
-    font-size: 70%;
-    font-weight: 500;
-}
+
