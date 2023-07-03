@@ -332,3 +332,67 @@ function createPage (objetos: PostCard[]): void{
 
 createPage(postCards);
 //Page Details//
+createPageDetails(postCards)
+//Page Details function //
+
+function createPageDetails (objetos: PostCard []): void{
+    const url = new URLSearchParams(window.location.search)
+    
+    const idUrl = url.get("id")
+    
+    const bodyDetails = document.querySelector(".detail-container");
+
+    const postDetails = document.createElement("div");
+    
+    postDetails.classList.add("post-details")
+    // inserting the html page details code with the object //
+    objetos.forEach((obj) =>{
+
+        if( Number(idUrl) == obj.id){
+            document.title = obj.title
+            
+            postDetails.innerHTML = `
+                                        <div class="post-card">
+                                            <img src="${obj.imageUrl}">
+                                            <div class="card-post">
+                                                <div class="tittle-post">${obj.title}</div>
+                                                <div class="text-post">
+                                                ${obj.body}
+                                            </div>
+                                        </div>
+                                    </div>`
+            
+            bodyDetails?.appendChild(postDetails)
+
+            obj.CommentPostDetails.forEach((coment) => {
+                
+                const commentsContainer = document.querySelector(".detail-container")
+                
+                const postDetails = document.createElement("div");
+
+                postDetails.classList.add("post-details");
+
+                postDetails.innerHTML = `<div class="comments-container">
+                                            <div class="comment-card">
+                        	                    <div class="user"> User${coment.id}:  ${coment.email}:</div>
+                                                <address class="text-comment">
+                                                ${coment.body}
+                                            </address>
+                                            <div class="separator"></div>
+                                            </div>
+                                        </div>`
+                    commentsContainer?.appendChild(postDetails)
+            })
+
+        }
+        
+    })
+
+    
+}
+
+
+
+
+
+
