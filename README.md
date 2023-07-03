@@ -24,7 +24,7 @@ The project has the following directory structure:
 ```
 |- index.html
 |- styles.css
-|-pageDetails.html
+|- pageDetails.html
 |- pageDetailStyle.css
 |- data.js
 |- data.ts
