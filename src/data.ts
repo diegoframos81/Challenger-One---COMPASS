@@ -318,7 +318,7 @@ function createPage (objetos: PostCard[]): void{
         <h2 class="${object.classTitle}">${object.title}</h2>
         <p>${bodySlice}</p>
         
-        <button><a href="../dist/pageDetails.html">Expand...</a></button>`
+        <button><a href="../dist/pageDetails.html?id=${object.id}">Expand...</a></button>`
 
         grid?.appendChild(divCard);
 

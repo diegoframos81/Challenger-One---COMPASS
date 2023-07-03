@@ -270,25 +270,24 @@ const postCards = [
             },
         ],
     }
-    // Adicione quantos objetos desejar...
 ];
+// firs page function create //
 function createPage(objetos) {
     const body = document.querySelector(".container-cards");
     const grid = document.createElement("div");
     grid.classList.add("grid");
     let divTemp = null;
     objetos.forEach((object) => {
-        //cortar o texto do body
+        //cut the texto from body
         const bodySlice = object.body.split(" ").slice(0, 25).join(" ");
-        // divTemp = document.createElement("div");
-        // grid.appendChild(divTemp);
+        //inserting the html code with the object //
         const divCard = document.createElement("div");
         divCard.innerHTML = `<img src="${object.imageUrl}" alt="${object.title}"/>
         
         <h2 class="${object.classTitle}">${object.title}</h2>
         <p>${bodySlice}</p>
         
-        <button><a href="../dist/pageDetails.html">Expand...</a></button>`;
+        <button><a href="../dist/pageDetails.html?id=${object.id}">Expand...</a></button>`;
         grid?.appendChild(divCard);
         divCard.addEventListener("click", () => {
             const getId = object.id;
@@ -298,14 +297,16 @@ function createPage(objetos) {
     body?.appendChild(grid);
 }
 createPage(postCards);
-createPageDetails(postCards);
 //Page Details//
+createPageDetails(postCards);
+//Page Details function //
 function createPageDetails(objetos) {
     const url = new URLSearchParams(window.location.search);
     const idUrl = url.get("id");
     const bodyDetails = document.querySelector(".detail-container");
     const postDetails = document.createElement("div");
     postDetails.classList.add("post-details");
+    // inserting the html page details code with the object //
     objetos.forEach((obj) => {
         if (Number(idUrl) == obj.id) {
             document.title = obj.title;
