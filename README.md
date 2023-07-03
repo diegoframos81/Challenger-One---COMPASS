@@ -1,8 +1,8 @@
 # Challenge_One Compass
 
-# Blog page
+# Post page
 
-This is a simple blog page design developed using HTML, CSS, JavaScript and TypeScript.
+This is a simple post page design developed using HTML, CSS, JavaScript and TypeScript.
 
 ## Functionalities
 
