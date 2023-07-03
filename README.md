@@ -15,6 +15,7 @@ This is a simple post page design developed using HTML, CSS, JavaScript and Type
 
 - HTML
 - CSS
+- JavaScript
 - TypeScript
 
 ## Project structure
